@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>REQ - Romeo Electro Quincaillerie</title>
+
+<meta name="description" content="REQ - Romeo Electro Quincaillerie. Électricité, téléphonie, éclairage, peinture, outillage et quincaillerie à Yaoundé et Douala. Vente en gros et détail.">
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #16344a;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 92%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* HEADER */
+
+header {
+    background: white;
+    border-bottom: 1px solid #e5edf2;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo-text {
+    font-size: 30px;
+    font-weight: 900;
+    color: #075b96;
+}
+
+.logo-text span {
+    color: #83bd25;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #16344a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #0875ba;
+}
+
+.language-button {
+    border: 2px solid #0875ba;
+    background: white;
+    color: #0875ba;
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(135deg, #f4fbff, #ffffff);
+    padding: 80px 0;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.badge {
+    color: #78b522;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    color: #075b96;
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.08;
+    margin: 15px 0 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #506878;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px 18px;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+.button-primary {
+    background: #0875ba;
+    color: white;
+}
+
+.button-secondary {
+    border: 2px solid #0875ba;
+    color: #0875ba;
+    background: white;
+}
+
+.hero-card {
+    background: white;
+    border: 1px solid #e4edf2;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.big-logo {
+    font-size: 80px;
+    font-weight: 900;
+    color: #075b96;
+}
+
+.big-logo span {
+    color: #83bd25;
+}
+
+.hero-card h2 {
+    color: #075b96;
+    margin-top: 5px;
+}
+
+.hero-card p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.opening {
+    margin-top: 20px;
+    padding: 12px;
+    background: #f2f8e9;
+    border-radius: 10px;
+    color: #4d791b;
+    font-weight: bold;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 75px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title small {
+    color: #78b522;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    color: #075b96;
+    font-size: 40px;
+    margin: 8px 0;
+}
+
+.section-title p {
+    color: #637684;
+}
+
+/* PRODUCTS */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #e1ebf0;
+    border-radius: 15px;
+    padding: 25px;
+    background: white;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.04);
+}
+
+.product-icon {
+    font-size: 38px;
+}
+
+.product-card h3 {
+    color: #145e8e;
+    margin: 10px 0;
+}
+
+.product-card p {
+    color: #617482;
+}
+
+.product-card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #0875ba;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* WHOLESALE */
+
+.wholesale {
+    background: #f5fafc;
+}
+
+.wholesale-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.wholesale h2 {
+    color: #075b96;
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.wholesale p {
+    color: #586f7c;
+    margin-bottom: 25px;
+}
+
+.wholesale-box {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.05);
+}
+
+.wholesale-box p {
+    color: #185f88;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* ABOUT */
+
+.about {
+    text-align: center;
+    max-width: 850px;
+}
+
+.about h2 {
+    color: #075b96;
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.about p {
+    color: #5d7280;
+}
+
+.locations {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.location {
+    background: #f1f8e9;
+    color: #557e1c;
+    padding: 9px 14px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #fbfdfe;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contact-card {
+    border: 1px solid #e1ebf0;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.contact-card h3 {
+    color: #075b96;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: #5d7280;
+    margin-bottom: 15px;
+}
+
+.contact-card a {
+    color: #0875ba;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* FOOTER */
+
+footer {
+    background: #083d61;
+    color: white;
+    padding: 25px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    font-weight: bold;
+}
+
+.footer-brand span {
+    color: #8bc43a;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 12px 0;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero-grid,
+    .wholesale-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .products,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2,
+    .wholesale h2,
+    .about h2 {
+        font-size: 32px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="container navbar">
+
+<div class="logo-text">
+REQ<span>•</span>
+</div>
+
+<nav>
+
+<a href="#accueil" data-fr="Accueil" data-en="Home">Accueil</a>
+
+<a href="#produits" data-fr="Produits" data-en="Products">Produits</a>
+
+<a href="#gros" data-fr="Vente en gros" data-en="Wholesale">Vente en gros</a>
+
+<a href="#apropos" data-fr="À propos" data-en="About">À propos</a>
+
+<a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
+
+<button class="language-button" onclick="changeLanguage()" id="languageButton">
+EN
+</button>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<main>
+
+<!-- ACCUEIL -->
+
+<section class="hero" id="accueil">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="badge">
+YAOUNDÉ • DOUALA
+</div>
+
+<h1 id="heroTitle">
+Tout pour l’électricité, la quincaillerie et la téléphonie.
+</h1>
+
+<p id="heroText">
+REQ — Romeo Electro Quincaillerie accompagne particuliers,
+artisans, revendeurs et professionnels avec une large gamme
+de produits, notamment en vente en gros.
+</p>
+
+<div class="buttons">
+
+<a class="button button-primary"
+href="https://wa.me/237690536407?text=Bonjour%20REQ%2C%20je%20souhaite%20conna%C3%AEtre%20le%20prix%20d%27un%20produit."
+target="_blank">
+
+💬 Demander un prix sur WhatsApp
+
+</a>
+
+<a class="button button-secondary"
+href="https://www.google.com/maps/search/?api=1&query=ROMEO+ELECTRO+QUINCAILLERIE"
+target="_blank">
+
+📍 Google Maps
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<div class="big-logo">
+R<span>E</span>Q
+</div>
+
+<h2>Romeo Electro Quincaillerie</h2>
+
+<p>
+Électricité • Téléphonie • Peinture • Outillage • Quincaillerie
+</p>
+
+<div class="opening">
+🕐 Ouvert de 07h00 à 20h00
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRODUITS -->
+
+<section id="produits">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>NOS PRODUITS</small>
+
+<h2>
+Une gamme pour vos besoins
+</h2>
+
+<p>
+Prix et disponibilité sur demande par WhatsApp.
+</p>
+
+</div>
+
+
+<div class="products">
+
+
+<div class="product-card">
+
+<div class="product-icon">⚡</div>
+
+<h3>Électricité</h3>
+
+<p>
+Géoflex, câbles gris, câbles Sonel,
+boîtiers carrés et accessoires électriques.
+</p>
+
+<a href="https://wa.me/237690536407?text=Bonjour%20REQ%2C%20je%20cherche%20des%20produits%20%C3%A9lectriques."
+target="_blank">
+Demander le prix →
+</a>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-icon">💡</div>
+
+<h3>Éclairage</h3>
+
+<p>
+Ampoules Lemonji X, Ctorch,
+Power Royal, Tesla et autres ampoules.
+</p>
+
+<a href="https://wa.me/237690536407?text=Bonjour%20REQ%2C%20je%20cherche%20des%20ampoules."
+target="_blank">
+Demander le prix →
+</a>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-icon">📱</div>
+
+<h3>Téléphonie</h3>
+
+<p>
+Téléphones, afficheurs, coques,
+chargeurs, écouteurs et accessoires.
+</p>
+
+<a href="https://wa.me/237690536407?text=Bonjour%20REQ%2C%20je%20cherche%20des%20produits%20de%20t%C3%A9l%C3%A9phonie."
+target="_blank">
+Demander le prix →
+</a>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-icon">🔨</div>
+
+<h3>Outillage</h3>
+
+<p>
+Marteaux et outils de menuiserie,
+de peinture, de bricolage et de chantier.
+</p>
+
+<a href="https://wa.me/237690536407?text=Bonjour%20REQ%2C%20je%20cherche%20des%20outils."
+target="_blank">
+Demander le prix →
+</a>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-icon">🎨</div>
+
+<h3>Peinture</h3>
+
+<p>
+Gosta Classic, Gosta Infinity,
+Watex 10, Watex 100, Mako et Unitent.
+</p>
+
+<a href="https://wa.me/237690536407?text=Bonjour%20REQ%2C%20je%20cherche%20des%20produits%20de%20peinture."
+target="_blank">
+Demander le prix →
+</a>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-icon">🦺</div>
+
+<h3>Chantier & quincaillerie</h3>
+
+<p>
+Casques de chantier, balais
+et autres articles de quincaillerie.
+</p>
+
+<a href="https://wa.me/237690536407?text=Bonjour%20REQ%2C%20je%20cherche%20des%20articles%20de%20quincaillerie."
+target="_blank">
+Demander le prix →
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VENTE EN GROS -->
+
+<section class="wholesale" id="gros">
+
+<div class="container wholesale-grid">
+
+<div>
+
+<small class="badge">
+VENTE EN GROS
+</small>
+
+<h2>
+Vous êtes revendeur ou professionnel ?
+</h2>
+
+<p>
+REQ propose une offre adaptée aux achats en quantité.
+Envoyez votre liste de produits sur WhatsApp pour
+demander un prix et vérifier la disponibilité.
+</p>
+
+<a class="button button-primary"
+href="https://wa.me/237694939850?text=Bonjour%20REQ%2C%20je%20suis%20revendeur%20ou%20professionnel%20et%20je%20souhaite%20un%20prix%20pour%20une%20commande%20en%20gros."
+target="_blank">
+
+📦 Demander un devis en gros
+
+</a>
+
+</div>
+
+
+<div class="wholesale-box">
+
+<p>✓ Vente en quantité</p>
+
+<p>✓ Prix sur demande</p>
+
+<p>✓ Large choix de produits</p>
+
+<p>✓ Contact direct WhatsApp</p>
+
+<p>✓ Yaoundé & Douala</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- À PROPOS -->
+
+<section id="apropos">
+
+<div class="container about">
+
+<small class="badge">
+À PROPOS
+</small>
+
+<h2>
+Romeo Electro Quincaillerie
+</h2>
+
+<p>
+REQ est une entreprise spécialisée dans la vente de produits
+d’électricité, quincaillerie, outillage, peinture, éclairage
+et téléphonie. Nous servons les professionnels, revendeurs
+et particuliers à Yaoundé et Douala.
+</p>
+
+<div class="locations">
+
+<div class="location">📍 Koabang</div>
+
+<div class="location">📍 Awae Escalier</div>
+
+<div class="location">📍 Ekounou</div>
+
+<div class="location">📍 Yaoundé</div>
+
+<div class="location">📍 Douala</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>CONTACT</small>
+
+<h2>
+Parlons de votre besoin
+</h2>
+
+<p>
+Pour connaître le prix ou la disponibilité d'un produit,
+contactez directement REQ.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<h3>💬 WhatsApp</h3>
+
+<p>
++237 690 536 407<br>
++237 694 939 850
+</p>
+
+<a href="https://wa.me/237690536407"
+target="_blank">
+Écrire sur WhatsApp →
+</a>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>☎️ Téléphone</h3>
+
+<p>
++237 675 906 910<br>
++237 696 882 614
+</p>
+
+<a href="tel:+237675906910">
+Appeler →
+</a>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>📍 Localisation</h3>
+
+<p>
+Yaoundé & Douala<br>
+Koabang • Awae Escalier • Ekounou
+</p>
+
+<a href="https://www.google.com/maps/search/?api=1&query=ROMEO+ELECTRO+QUINCAILLERIE"
+target="_blank">
+Ouvrir Google Maps →
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="container footer-content">
+
+<div class="footer-brand">
+REQ <span>— Romeo Electro Quincaillerie</span>
+</div>
+
+<div>
+07h00 – 20h00 • Yaoundé & Douala
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+let english = false;
+
+function changeLanguage() {
+
+english = !english;
+
+const button = document.getElementById("languageButton");
+
+const navigationLinks = document.querySelectorAll("nav a");
+
+if (english) {
+
+button.textContent = "FR";
+
+navigationLinks.forEach(function(link) {
+link.textContent = link.dataset.en;
+});
+
+document.getElementById("heroTitle").textContent =
+"Everything for electrical work, hardware and mobile phones.";
+
+document.getElementById("heroText").textContent =
+"REQ — Romeo Electro Quincaillerie serves individuals, tradespeople, resellers and professionals with a wide range of products, including wholesale sales.";
+
+} else {
+
+button.textContent = "EN";
+
+navigationLinks.forEach(function(link) {
+link.textContent = link.dataset.fr;
+});
+
+document.getElementById("heroTitle").textContent =
+"Tout pour l’électricité, la quincaillerie et la téléphonie.";
+
+document.getElementById("heroText").textContent =
+"REQ — Romeo Electro Quincaillerie accompagne particuliers, artisans, revendeurs et professionnels avec une large gamme de produits, notamment en vente en gros.";
+
+}
+
+}
+
+</script>
+
+</body>
+                                          </html>
